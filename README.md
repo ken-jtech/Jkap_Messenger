@@ -31,7 +31,7 @@ export default {
 
 # sites 
 - [Component library](ui.shadcn.com) Beautiful open source designed components that are customised and accessible its your apps  
-## edit config file with 
+- edit config file with 
 ```
 {
   "compilerOptions": {
@@ -46,7 +46,7 @@ export default {
   }
 }
 ```
-## Update vite.config.ts
+- Update vite.config.ts
 ```
 # (so you can import "path" without error)
 npm i -D @types/node
@@ -71,11 +71,11 @@ export default defineConfig({
 ```
 npx shadcn-ui@latest init
 ```
-## Command for adding button components using shadcn(npm)
+- Command for adding button components using shadcn(npm)
 ```
 npx shadcn-ui@latest add button
 ```
-## Creating a form(npm)
+- Creating a form(npm)
 ```
 npx shadcn-ui@latest add form
 ```

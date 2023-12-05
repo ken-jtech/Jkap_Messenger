@@ -1,1 +1,0 @@
-import { Client, Account, Databases, Storage, Avaters }  'appwrite';
