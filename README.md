@@ -79,3 +79,4 @@ npx shadcn-ui@latest add button
 ```
 npx shadcn-ui@latest add form
 ```
+- install appwrite```npm install appwrite```
