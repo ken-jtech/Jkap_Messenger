@@ -52,7 +52,7 @@ export default {
 npm i -D @types/node
 
 ```
--paste copy and paste to overwrite exiting code below in vite.config.ts
+- paste copy and paste to overwrite exiting code below in vite.config.ts
 ```
 import path from "path"
 import react from "@vitejs/plugin-react"
@@ -79,4 +79,7 @@ npx shadcn-ui@latest add button
 ```
 npx shadcn-ui@latest add form
 ```
-- install appwrite```npm install appwrite```
+- install appwrite
+```
+npm install appwrite
+```
