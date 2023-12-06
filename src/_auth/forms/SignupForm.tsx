@@ -9,10 +9,14 @@ import { z } from "zod";
 import { Loader } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CreateUserAccount } from "@/lib/appwrite/api";
+import { useToast } from "@/components/ui/use-toast"
+import SigninForm from "./SigninForm";
+
 
 
  
 const SignupForm = () => {
+  const { toast } = useToast();
   const isLoading = false;
  
  // 1. Define your form.
@@ -31,7 +35,12 @@ async function onSubmit(values: z.infer<typeof SignupValidation>) {
   // Create the user
   const newUser = await CreateUserAccount(values);
   // ✅ This will be type-safe and validated.
-  console.log(newUser)
+  if(!newUser) {
+    return toast({
+            title: 'Sign up failed. Please try again.',
+            })
+  }
+    //const session = await SignInAccount()
 }
 
   return (

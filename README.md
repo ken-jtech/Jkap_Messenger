@@ -79,7 +79,15 @@ npx shadcn-ui@latest add button
 ```
 npx shadcn-ui@latest add form
 ```
-- install appwrite
+- install appwrite(npm)
 ```
 npm install appwrite
+```
+- install app toast(npm)
+```
+npx shadcn-ui@latest add toast
+```
+- install react libraries 
+```
+npm install @tanstack/react-query
 ```
