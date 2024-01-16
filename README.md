@@ -73,7 +73,7 @@ npx shadcn-ui@latest init
 ```
 - Command for adding button components using shadcn(npm)
 ```
-npx shadcn-ui@latest add button
+
 ```
 - Creating a form(npm)
 ```

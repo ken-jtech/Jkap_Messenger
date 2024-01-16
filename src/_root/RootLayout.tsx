@@ -1,3 +1,4 @@
+import Bottombar from '@/components/ui/shared/Bottombar'
 import LeftSidebar from '@/components/ui/shared/LeftSidebar'
 import Topbar from '@/components/ui/shared/Topbar'
 import { Outlet } from 'react-router-dom'
@@ -12,6 +13,7 @@ function Home() {
         <Outlet />
       </section>
       
+      <Bottombar />
     </div>
   )
 }
