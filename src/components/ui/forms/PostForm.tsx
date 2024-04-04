@@ -5,13 +5,14 @@ import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+import { Textarea } from "../textarea"
+import FIleUploader from "../shared/FIleUploader"
+import { Input } from "../input"
  
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -40,17 +41,42 @@ const PostForm = () => {
       <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-9 w-full max-w-5xl">
         <FormField
           control={form.control}
-          name="username"
+          name="caption"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel className="shad-form_label">Caption</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Textarea className="shad-textarea custom-scrollbar" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
-              <FormMessage />
+      
+              <FormMessage className="shad-form_message"/>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="file"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="shad-form_label">Add Photos</FormLabel>
+              <FormControl>
+                <FIleUploader />
+              </FormControl>
+      
+              <FormMessage className="shad-form_message"/>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="location"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="shad-form_label">Add Location</FormLabel>
+              <FormControl>
+                <Input type="text" className="shad-input" />
+              </FormControl>
+              <FormMessage className="shad-form_message"/>
             </FormItem>
           )}
         />
